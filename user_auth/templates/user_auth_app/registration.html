@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    {%extends 'index.html'%}
+    {% load staticfiles %}
+
+    {%block index_block%}
+        <h1>the registration page</h1>
+        <div class="jumbotron">
+
+            <!-- at first the else statement is executed as registered is false and forms are displayed with no values as 
+            the value injected are empty i.e just object are created then after form is filled and
+            validated the value of registered becomes true and if statement is executed -->
+
+
+            {% if registered %}
+                <h1>Thank you for registering! </h1>
+            {%else%}
+                <h1>Register Here</h1>
+                <h3>Fill Out The Form:</h3>
+
+                <form enctype="multipart/form-data" method = "POST" >
+                    
+                    {{user_form.as_p}}
+                    {{profile_form.as_p}}
+                     {% csrf_token %}   
+                    <!-- typ csrf_token jai;e submit bhand agi dinu parxa natra error auxa  -->
+                    <input type="submit" value="Register">
+
+                </form>
+
+
+            {% endif %}
+        </div>
+
+    {%endblock%}
