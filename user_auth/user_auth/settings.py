@@ -27,7 +27,7 @@ SECRET_KEY = 'r^+x^1o)y9+v$g2=wtr3n_7%_ut5j(ft%^vd5gsd+k)vm1kb!u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sujanghimire.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'user_auth_app'
+    'user_auth_app',
 ]
 
 MIDDLEWARE = [
